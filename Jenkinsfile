@@ -23,11 +23,11 @@ pipeline {
                                             usernameVariable: 'USERNAME')]) {
             /* groovylint-disable-next-line noDef, VariableTypeRequired*/
             def remote = [:]
-            remote.name = '192.168.0.10'//params.Server_Name
-            remote.host = '192.168.0.10'//params.Server_Name
+            remote.name = params.Server_Name
+            remote.host = params.Server_Name
             remote.user = USERNAME
             remote.password = PASSWORD
-            remote.allowAnyHost = true
+            remote.allowAnyHosts = true
 
             sshCommand remote: remote, command: 'pwd'
             sshCommand remote: remote, command: 'ls -ltr'
