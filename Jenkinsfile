@@ -17,10 +17,10 @@ pipeline {
     stage('Remote SSH'){
       steps {
         script{
-          withCredentials([usernamePassword(credentialsID: 'weblogic_test',
+          withCredentials([usernamePassword(credentialsId: 'weblogic_test',
                                             passwordVariable: 'PASSWORD',
                                             usernameVariable: 'USERNAME')]) {
-            /* Groovylint-disable-next-line noDef, VariableTypeRequired*/
+            /* groovylint-disable-next-line noDef, VariableTypeRequired*/
             def remote = [:]
             remote.name = params.Server_Name
             remote.host = params.Server_Name
