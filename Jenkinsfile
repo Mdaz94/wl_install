@@ -23,8 +23,8 @@ pipeline {
                                             usernameVariable: 'USERNAME')]) {
             /* groovylint-disable-next-line noDef, VariableTypeRequired*/
             def remote = [:]
-            remote.name = params.Server_Name
-            remote.host = params.Server_Name
+            remote.name = '192.168.0.10'//params.Server_Name
+            remote.host = '192.168.0.10'//params.Server_Name
             remote.user = USERNAME
             remote.password = PASSWORD
             remote.allowAnyHost = true
