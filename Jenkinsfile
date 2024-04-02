@@ -24,8 +24,8 @@ pipeline {
             def remote = [:]
             remote.name = params.Server_Name
             remote.host = params.Server_Name
-            remote.user = params.USERNAME
-            remote.password = params.PASSWORD
+            remote.user = USERNAME
+            remote.password = PASSWORD
             remote.allowAnyHost = true
 
             sshCommand remote: remote, command: 'pwd'
