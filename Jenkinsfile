@@ -1,16 +1,16 @@
 pipeline {
   agent { label 'linux' }
   parameters {
-    string(name 'Server_Name'. defaultValue'',
+    string(name 'Server_Name', defaultValue'',
            description: 'Enter the FQDN name of the Admin Server for the new cluster')
     
-    string(name 'Admin_User_Name'. defaultValue'',
+    string(name 'Admin_User_Name', defaultValue'',
            description: 'Enter weblogic admin user for the cluster')
 
-    password(name 'Admin_User_Password'. defaultValue'',
+    password(name 'Admin_User_Password', defaultValue'',
            description: 'Enter weblogic admin password for the cluster')
 
-    string(name 'Weblogic_Domain'. defaultValue'',
+    string(name 'Weblogic_Domain', defaultValue'',
            description: 'Enter the domain name')
   }
   stages {
