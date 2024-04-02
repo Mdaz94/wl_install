@@ -1,5 +1,6 @@
 pipeline {
   //agent { label 'linux' }
+  agent any
   parameters {
     string(name: 'Server_Name', defaultValue:'',
            description: 'Enter the FQDN name of the Admin Server for the new cluster')
