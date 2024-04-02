@@ -17,9 +17,9 @@ pipeline {
     stage('Remote SSH'){
       steps {
         script{
-          withCredentials([usernamePassword(credentialsID: 'sshOCCAS',
+          withCredentials([usernamePassword(credentialsID: 'weblogic_test',
                                             passwordVariable: 'PASSWORD',
-                                            usernameVariable: 'Username')]) {
+                                            usernameVariable: 'USERNAME')]) {
             /* Groovylint-disable-next-line noDef, VariableTypeRequired*/
             def remote = [:]
             remote.name = params.Server_Name
