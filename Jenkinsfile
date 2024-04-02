@@ -30,3 +30,9 @@ pipeline {
 
             sshCommand remote: remote, command: 'pwd'
             sshCommand remote: remote, command: 'ls -ltr'
+          }
+        }
+      }
+    }
+  }
+}
