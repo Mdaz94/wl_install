@@ -14,7 +14,7 @@ pipeline {
            description: 'Enter the domain name')
   }
   stages {
-    stage{'Remote SSH'){
+    stage('Remote SSH'){
       steps {
         script{
           withCredentials([usernamePassword(credentialsID: 'sshOCCAS',
